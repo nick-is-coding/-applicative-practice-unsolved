@@ -4,8 +4,8 @@ import { data } from "../data/data";
 // Return a given asteroid object of data
 // Return example: { key1: value1, key2: value2, ... , keyN: valueN }
 
-export function getAsteroidDataByName(data, asteroidName) {
-  // Your code goes here...
+export function getAsteroidDataByName(data, asteroidName) { 
+  return data.asteroids.filter(a => a.name === asteroidName)[0];
 }
 
 
