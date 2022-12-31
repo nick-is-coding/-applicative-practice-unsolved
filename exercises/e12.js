@@ -5,10 +5,9 @@ import { data } from "../data/data";
 // Return example: 42
 
 export function allPlanetsMoonsCount(data) {
-  // Your code goes here...
-}
-
-
+  return data.planets.map(obj => obj?.moons?.length || 0)
+  .reduce((sum, moons) => sum + moons, 0);
+};
 
 // === TEST YOURSELF ===
 // Once you're finished run the test with "npm run test-12"
