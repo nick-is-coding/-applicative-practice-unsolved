@@ -5,9 +5,9 @@ import { data } from "../data/data";
 // Return example: ['name1', 'name2', ... , 'nameN']
 
 export function lowMoonsPlanets(data) {
-  const planets = data.planets;
-  const grabPlanets =  planets.filter(obj => obj.moonsCount < 10);
-  return grabPlanets.map(obj => obj.name);
+  return data.planets
+  .filter(obj => obj.moonsCount < 10)
+  .map(obj => obj.name);
 }
 
 
